@@ -180,16 +180,7 @@
       isCorrect: null
     };
   }
-document.addEventListener("DOMContentLoaded", () => {
-  const brand = document.querySelector(".brand");
 
-  if (brand) {
-    brand.style.cursor = "pointer"; // чтобы показывалась рука при наведении
-    brand.addEventListener("click", () => {
-      window.location.href = "/"; // главная страница
-    });
-  }
-});
   function makeTicket() {
     return [makeQuestion(), makeQuestion(), makeQuestion()];
   }
@@ -426,7 +417,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----- Events -----
   startQuick?.addEventListener("click", () => startMode("quick"));
   startFull?.addEventListener("click", () => startMode("full"));
-
+const brand = document.querySelector(".brand");
+brand?.addEventListener("click", hardReset);
   submitTicket?.addEventListener("click", checkTicket);
   nextTicket?.addEventListener("click", nextStep);
 
