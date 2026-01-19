@@ -296,10 +296,11 @@ document.addEventListener("DOMContentLoaded", () => {
           hint.className = "optHint";
           const selected = q.selectedIds.includes(opt.id);
 
-          if (opt.isTrue && selected) hint.textContent = "✓ Вы выбрали истинное";
-          else if (opt.isTrue && !selected) hint.textContent = "• Истинное (не выбрано)";
-          else if (!opt.isTrue && selected) hint.textContent = "• Ложное (выбрано ошибочно)";
-          else hint.textContent = "";
+          // if (opt.isTrue && selected) hint.textContent = "✓ Вы выбрали истинное";
+          // else if (opt.isTrue && !selected) hint.textContent = "• Истинное (не выбрано)";
+          // else if (!opt.isTrue && selected) hint.textContent = "• Ложное (выбрано ошибочно)";
+          // else
+          hint.textContent = "";
 
           row.appendChild(hint);
         }
