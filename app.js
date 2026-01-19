@@ -180,7 +180,16 @@
       isCorrect: null
     };
   }
+document.addEventListener("DOMContentLoaded", () => {
+  const brand = document.querySelector(".brand");
 
+  if (brand) {
+    brand.style.cursor = "pointer"; // чтобы показывалась рука при наведении
+    brand.addEventListener("click", () => {
+      window.location.href = "/"; // главная страница
+    });
+  }
+});
   function makeTicket() {
     return [makeQuestion(), makeQuestion(), makeQuestion()];
   }
